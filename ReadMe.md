@@ -16,3 +16,15 @@ The development focus here is clearly on the reusability of the pipeline. I want
 * New Libraries:
   - Kedro (Python)
   - pytest (Python)
+
+Projectflow
+
+
+All in all the project is structured as follows:
+
+- `1_create_Database`: Using code from my old project to set up the Database and load all static .csv files into the database. Since this section is only for *initializing the Database* this code will not be reworked.
+- `2_Data_Engineering`: This section contains all Data Pipelines. This section will be implemented in the Kedro-Framework. The designed Pipelines are
+    - `API_Call_to_staging_table`: In this pipeline the API gets called. The data will be transformed from the Wiener Linien Realtime API json-Format to tabluar data format and stored in the staging table in the Database.
+    - `Data_Transformation_pipeline`: In this pipeline the data from the staging table will be transformed, cleaned and added to the production table. Also Feature Engineering is taking place in this pipeline.
+    - `Data_Analysis_pipeline`: After saving all the cleaned data in the database the analysis is carried out here.
+- `3_Result_Description`: The overall Result and working steps are described here.

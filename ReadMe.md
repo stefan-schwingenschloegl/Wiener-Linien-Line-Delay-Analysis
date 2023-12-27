@@ -1,6 +1,8 @@
 # Wiener-Linien-Line-Delay-Analysis
 * Author: Stefan Roland Schwingenschlögl
 * email: stefan.roland.schwingenschloegl@gmail.com
+
+<b>Disclaimer: In this project data from <a href = "http://www.wienerlinien.at"> Wiener Linien GmbH & Co KG</a> is used. This data is licensed under <a href = "https://creativecommons.org/licenses/by/4.0/deed.de"> Creative Commons Namensnennung 4.0 International</a>. The raw data is not pushed to git and only the analysis will be published. Further data metadata description can be acessed here: <a href = "https://www.data.gv.at/katalog/dataset/wiener-linien-echtzeitdaten-via-datendrehscheibe-wien"> data.gv.at - Wiener Linien Echtzeitdaten via Datendrehscheibe Wien</a>. </b>
 ___
 # Overview
 After a first general preparation for the use of the <a href = "http://www.wienerlinien.at/ogd_realtime/doku/"> Wiener Linien Realtime API</a> was developed in the <a href = "https://github.com/stefan-schwingenschloegl/Wiener-Linien-Project">Wiener Linien Project</a>, this repository will focus on the further development of the code. In the last project, I analysed the delays at specific stops. In this project, I want to find out in which sections of the route a particular line generates delays. Once this pipeline has been created, hot spots on different routes could be identified.

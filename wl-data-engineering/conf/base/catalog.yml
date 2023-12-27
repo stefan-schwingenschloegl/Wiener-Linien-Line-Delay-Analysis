@@ -1,0 +1,28 @@
+db_haltestellen:
+  type: pandas.SQLQueryDataset
+  sql: "select * from haltestellen;"
+  credentials: db_credentials
+
+db_linie:
+  type: pandas.SQLQueryDataset
+  sql: "select * from linien;"
+  credentials: db_credentials
+
+db_fahrwegverlaeufe:
+  type: pandas.SQLQueryDataset
+  sql: "select * from fahrwegverlaeufe;"
+  credentials: db_credentials
+
+db_haltepunkte:
+  type: pandas.SQLQueryDataset
+  sql: "select * from haltepunkte;"
+  credentials: db_credentials
+
+db_gps_punkte:
+  type: pandas.SQLQueryDataset
+  sql: "select * from gps_punkte;"
+  credentials: db_credentials
+
+API_1A_Call:
+  type: api.APIDataset
+  url: http://www.wienerlinien.at/ogd_realtime/monitor?StopID=2915&StopID=2904&StopID=2905&StopID=2906&StopID=2907&StopID=2910&StopID=2911&StopID=2938&StopID=2926&StopID=2945&StopID=2914&StopID=2944

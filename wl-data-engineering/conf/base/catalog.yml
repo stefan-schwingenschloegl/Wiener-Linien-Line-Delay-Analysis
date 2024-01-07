@@ -23,6 +23,23 @@ db_gps_punkte:
   sql: "select * from gps_punkte;"
   credentials: db_credentials
 
-API_1A_Call:
+API_Call_13A:
   type: api.APIDataset
-  url: http://www.wienerlinien.at/ogd_realtime/monitor?StopID=2915&StopID=2904&StopID=2905&StopID=2906&StopID=2907&StopID=2910&StopID=2911&StopID=2938&StopID=2926&StopID=2945&StopID=2914&StopID=2944
+  url: http://www.wienerlinien.at/ogd_realtime/monitor?StopID=660&StopID=661&StopID=662&StopID=663&StopID=664&StopID=665&StopID=688&StopID=668&StopID=682&StopID=669&StopID=670&StopID=671&StopID=672&StopID=673&StopID=674&StopID=675&StopID=676&StopID=39&StopID=40&StopID=691&StopID=692&StopID=693&StopID=694&StopID=695&StopID=696&StopID=697&StopID=698&StopID=699&StopID=773&StopID=3527&StopID=3528&StopID=3529&StopID=705&StopID=706&StopID=707&StopID=708
+  metadata:
+    kedro-viz:
+      layer: WL_API_preparation
+API_response_stage_table:
+  type:  pandas.SQLTableDataset
+  table_name: stage_api_response
+  #sql: "select * from gps_punkte;"
+  credentials: db_credentials
+  save_args:
+    if_exists: append
+  metadata:
+    kedro-viz:
+      layer: DB_stage_table
+
+API_Call_1A:
+  type: api.APIDataset
+  url: http://www.wienerlinien.at/ogd_realtime/monitor?StopID=2915&StopID=2904&StopID=2905&StopID=2906&StopID=2907&StopID=2910

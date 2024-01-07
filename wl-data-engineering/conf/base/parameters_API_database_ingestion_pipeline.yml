@@ -5,4 +5,14 @@
 # Link: https://docs.kedro.org/en/0.19.1/configuration/parameters.html
 lines_to_evaluate: [1A]
 wl_monitor_url: http://www.wienerlinien.at/ogd_realtime/monitor?
-line_directions_to_consider: [1, 2]
+line_directions_to_consider: ['1']
+
+# API error dict are all error codes from Documentation of pdf -> https://www.wienerlinien.at/ogd_realtime/doku/ogd/wienerlinien-echtzeitdaten-dokumentation.pdf
+api_error_dict: {311: "DB_nicht_verfügbar",
+                 312: "Haltepunkt_existiert_nicht",
+                 316: "Abfragelimit erreicht",
+                 320: "GET Abfrage invalid",
+                 321: "GET Abfrage parameter fehlt", 
+                 322: "Keine Daten vorhanden"}
+
+dataframe_schema_for_db: ['API_ServerTime', 'StopName', 'rbl',  'LineID', 'Direction',  'TimePlanned', 'TimeReal']
